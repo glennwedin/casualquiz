@@ -1,8 +1,6 @@
 'use strict';
 
-const { WebhookClient, Suggestion } = require('dialogflow-fulfillment');
-const similarity = require('./utils/similarity');
-const shuffle = require('./utils/shuffle');
+const { WebhookClient } = require('dialogflow-fulfillment');
 
 // intents
 const startQuiz = require('./intents/startQuiz');

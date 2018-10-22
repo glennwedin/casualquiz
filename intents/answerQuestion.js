@@ -1,8 +1,8 @@
 const questions = require('../questions');
 const similarity = require('../utils/similarity');
 
-exports.answerQuestion = function(agent) {
-    const answer = request.body.queryResult.parameters.answer;
+module.exports = function(agent) {
+    const answer = agent.parameters.answer;
     const context = agent.getContext('question-id');
     const startQuiz = agent.getContext('start-quiz');
     const category = startQuiz.parameters.category;

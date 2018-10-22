@@ -1,4 +1,4 @@
-exports.shuffle = function(array) {
+module.exports = function(array) {
     let counter = array.length;
     // While there are elements in the array
     while (counter > 0) {

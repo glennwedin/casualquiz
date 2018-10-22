@@ -1,7 +1,9 @@
+const { WebhookClient, Suggestion } = require('dialogflow-fulfillment');
+
 const questions = require('../questions');
 const shuffle = require('../utils/shuffle');
 
-exports.startQuiz = function(agent) {
+module.exports = function(agent) {
     const startQuizContext = agent.getContext('start-quiz');
     const category = startQuizContext.parameters.category;
 
