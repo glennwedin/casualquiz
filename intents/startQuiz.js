@@ -35,7 +35,8 @@ exports.startQuiz = function(agent) {
 
     suggs = shuffle(suggs);
     agent.add(
-        questions[category][rand].question + stringifyAlternatives(suggs)
+        questions[category][rand].question +
+            exports.stringifyAlternatives(suggs)
     );
     for (i = 0; suggs.length > i; i++) {
         agent.add(new Suggestion(suggs[i]));
