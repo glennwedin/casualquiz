@@ -30,7 +30,13 @@ module.exports = function(agent) {
     }
 
     suggs = shuffle(suggs);
-    agent.add(questions[category][rand].question + ' ' + suggs.join(', '));
+    agent.add(
+        questions[category][rand].question +
+            ' ' +
+            suggs.slice(0, -1).join(', ') +
+            ' or ' +
+            suggs.slice(-1)
+    );
     for (i = 0; suggs.length > i; i++) {
         agent.add(new Suggestion(suggs[i]));
     }
