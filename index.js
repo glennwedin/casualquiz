@@ -3,7 +3,7 @@
 const { WebhookClient } = require('dialogflow-fulfillment');
 
 // intents
-const startQuiz = require('./intents/startQuiz');
+const startQuiz = require('./intents/startQuiz').startQuiz;
 const welcome = require('./intents/welcome');
 const fallback = require('./intents/fallback');
 const quizCategory = require('./intents/quizCategory');

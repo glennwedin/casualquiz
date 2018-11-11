@@ -8,11 +8,16 @@
     "engines": {
         "node": "8"
     },
+    "scripts": {
+        "test": "mocha"
+    },
     "dependencies": {
         "actions-on-google": "^2.2.0",
         "dialogflow-fulfillment": "^0.5.0"
     },
     "devDependencies": {
-        "html-entities": "^1.2.1"
+        "chai": "^4.2.0",
+        "html-entities": "^1.2.1",
+        "mocha": "^5.2.0"
     }
 }
