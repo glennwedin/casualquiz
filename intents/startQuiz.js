@@ -3,7 +3,11 @@ const { WebhookClient, Suggestion } = require('dialogflow-fulfillment');
 const questions = require('../questions');
 const shuffle = require('../utils/shuffle');
 
-module.exports = function(agent) {
+exports.stringifyAlternatives = suggs => {
+    return ' ' + suggs.slice(0, -1).join(', ') + ' or ' + suggs.slice(-1);
+};
+
+exports.startQuiz = function(agent) {
     const startQuizContext = agent.getContext('start-quiz');
     const category = startQuizContext.parameters.category;
 
@@ -31,11 +35,7 @@ module.exports = function(agent) {
 
     suggs = shuffle(suggs);
     agent.add(
-        questions[category][rand].question +
-            ' ' +
-            suggs.slice(0, -1).join(', ') +
-            ' or ' +
-            suggs.slice(-1)
+        questions[category][rand].question + stringifyAlternatives(suggs)
     );
     for (i = 0; suggs.length > i; i++) {
         agent.add(new Suggestion(suggs[i]));
