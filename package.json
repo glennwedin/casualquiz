@@ -1,10 +1,10 @@
 {
     "name": "dialogflowFunction",
-    "description": "This is the default fulfillment for a Dialogflow agents using Cloud Functions for Firebase",
+    "description": "Dialogflow fulfillment for Know This",
     "version": "1.0.0",
     "private": true,
     "license": "CC-BY-SA",
-    "author": "Google Inc.",
+    "author": "Glenn Wedin",
     "engines": {
         "node": "8"
     },
